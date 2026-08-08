@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Checkout - Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="main-bg">
+        
+        <!-- Navigation Bar -->
+        <div class="nav-container">
+          <div class="nav">
+            <div class="icons">
+              <img src="images/logo.png" alt="logo" class="logo">
+            </div>
+
+            <!-- Sandwich Button for Mobile / small screens -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="menu" id="navMenu">
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Checkout Section -->
+        <section class="checkout-container" id="checkout-section">
+          <h2>Checkout</h2>
+          <div class="checkout-wrapper">
+        
+            <!-- Order Summary Card -->
+            <div class="order-summary">
+              <h3>Order Summary</h3>
+              <div class="summary-list" id="cart-items">
+                <p class="empty-msg">Your cart is empty.</p>
+              </div>
+              <hr>
+              <div class="summary-total">
+                <span>Total Amount</span>
+                <span id="cart-total">GHS 0.00</span>
+              </div>
+            </div>
+
+            <!-- Customer Details Form -->
+            <form class="checkout-form">
+              <h3>Delivery Details</h3>
+              
+              <label for="c-name">Full Name</label>
+              <input type="text" id="c-name" class="box" placeholder="Your Name" required>
+
+              <label for="c-email">Email Address</label>
+              <input type="email" id="c-email" class="box" placeholder="customer@email.com" required>
+
+              <label for="c-phone">Phone Number</label>
+              <input type="tel" id="c-phone" class="box" placeholder="+233..." required>
+
+              <label for="c-address">Delivery Address</label>
+              <textarea id="c-address" class="text-a" placeholder="Enter full address..." required></textarea>
+
+              <h3>Order Placement</h3>
+              <p style="margin-bottom: 15px; font-family: oswald; font-size: 15px;">Clicking the button below will open WhatsApp with your order details prefilled.</p>
+
+              <button type="submit" class="join">Place Order via WhatsApp</button>
+            </form>
+
+          </div>
+        </section>
+
+      </div> 
+    </div> 
+
+    <script src="app.js"></script>
+  </body>
+</html>

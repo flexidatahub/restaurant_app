@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>| BOOK A SERVICE</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-book">
+        <div class="nav-container">
+          <div class="nav">
+            <div class="icons">
+              <img src="images/logo.png" alt="logo" class="logo">
+            </div>
+            <div class="menu">
+              <ul>
+                <li><a href="index.html">HOME</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <h3>EVENTS CATERING</h3>
+          <hr>
+          <p class="desc">Our catering is to the standards of the African setting.</p>
+        </div>
+      </div>
+    </div>
+    <div class="form-container">
+      <div class="head">
+        <h2>We cant wait to cater for your next event !</h2>
+        <p class="inq">To inquire about our services, kindly fill out the form below.</p>
+        <div class="form">
+          <form id="booking-form">
+            <label for="name">NAME*</label><br>
+            <input id="name" class="box" required><br>
+            
+            <label for="email">EMAIL*</label><br>
+            <input type="email" id="email" class="box" required><br>
+            
+            <label for="phone">PHONE NUMBER*</label><br>
+            <input type="tel" id="phone" class="box" required><br>
+            
+            <label for="date">DATE OF YOUR EVENT</label><br>
+            <input type="date" id="date" class="box"><br>
+            
+            <label>WHAT TYPE OF EVENT ARE YOU HAVING?</label><br>
+            <input type="checkbox" id="birthday" name="event" value="Birthday" class="opd">
+            <label for="birthday">Birthday</label><br>
+            <input type="checkbox" id="wedding" name="event" value="Wedding">
+            <label for="wedding">Wedding</label><br>
+            <input type="checkbox" id="funeral" name="event" value="Funeral">
+            <label for="funeral">Funeral</label><br>
+            <input type="checkbox" id="anniversary" name="event" value="Anniversary">
+            <label for="anniversary">Anniversary</label><br>
+            <input type="checkbox" id="others" name="event" value="Others">
+            <label for="others">Others</label><br><br>
+            
+            <label for="guests">HOW MANY GUESTS ARE YOU EXPECTING?</label><br>
+            <input type="number" id="guests" name="guests" class="box"><br>
+            
+            <label for="location">EVENT LOCATION</label><br>
+            <input id="location" name="location" class="box"><br>
+            
+            <label for="info">ANYTHING ELSE WE SHOULD KNOW?</label><br>
+            <textarea id="info" name="info" rows="4" class="text-a"></textarea><br>
+            
+            <button class="join" type="submit">SEND INQUIRY</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById('booking-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const phone = document.getElementById('phone').value.trim();
+        const eventDate = document.getElementById('date').value;
+        const guests = document.getElementById('guests').value;
+        const location = document.getElementById('location').value.trim();
+        const info = document.getElementById('info').value.trim();
+
+        // Collect checked event types
+        const selectedEvents = [];
+        document.querySelectorAll('input[name="event"]:checked').forEach(checkbox => {
+          selectedEvents.push(checkbox.value);
+        });
+        const eventTypesStr = selectedEvents.length > 0 ? selectedEvents.join(', ') : 'Not specified';
+
+        // Build WhatsApp message text
+        const message = `Hello, I would like to inquire about event catering!\n\n` +
+                        `*Name:* ${name}\n` +
+                        `*Email:* ${email}\n` +
+                        `*Phone:* ${phone}\n` +
+                        `*Event Date:* ${eventDate || 'N/A'}\n` +
+                        `*Event Type(s):* ${eventTypesStr}\n` +
+                        `*Expected Guests:* ${guests || 'N/A'}\n` +
+                        `*Location:* ${location || 'N/A'}\n` +
+                        `*Additional Info:* ${info || 'N/A'}`;
+
+        // Replace with your business WhatsApp phone number (in international format, e.g., 233539183773)
+        const whatsappNumber = "233539183773";
+        const encodedMessage = encodeURIComponent(message);
+
+        window.location.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      });
+    </script>
+  </body>
+</html>

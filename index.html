@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>homepage</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="main-bg">
+        <div class="nav-container">
+          <div class="nav">
+            <div class="icons">
+              <a href="/"><img src="images/logo.png" alt="logo" class="logo"></a>
+            </div>
+
+            <!-- Hamburger Button for Mobile -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="menu" id="navMenu">
+              <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#menu">MENU</a></li>
+                <li><a href="book.html">SERVICES</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="checkout.html">CART</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          <h3>HAJIA WUMPINI'S FOOD <span>SERVICES</span></h3>
+          <hr>
+          <p class="desc">Home of the best local foods.</p>
+          <a href="#menu"><button class="join">VIEW MENU</button></a>
+        </div>
+      </div>
+
+      <!-- ABOUT SECTION -->
+      <div class="abtsec">
+        <div class="content" id="about">
+          <div class="abtcont">
+            <div class="abtimg">
+              <img src="images/shop.jpeg" alt="restaurant image">
+            </div>
+            <div>
+              <h2>ABOUT</h2>
+              <hr>
+              <p>Hajia Wumpini's Food Services started in 2007.
+                 A small setup but satisfying
+                 big appetites. Our customers have been the most resourceful
+                 to our growth, and we owe our existence and 
+                 presence to them.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENU HEAD SECTION -->
+      <div class="content" id="menu">
+        <div class="head_menu">
+          <h3>MENU</h3>
+          <hr>
+          <p>"There is no love sincerer than the love of food"</p>
+          <p class="ref">-George Bernard Shaw</p>
+        </div>
+      </div>
+
+      <!-- FOOD MENU SECTION -->
+      <div class="food-menu">
+        <div class="container">
+          <h2 class="text-center">EXPLORE OUR MENU</h2>
+
+          <!-- Food Box 1 (FIXED) -->
+         <div class="food-menu-box">
+            <div class="food-menu-img">
+              <img src="images/rice.jpg" alt="Rice" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+              <h4>Plain rice with Egg</h4>
+              <p class="food-price">GHS35</p>
+              <p class="food-detail">
+                Made authentic zongo stew and salad
+              </p>
+              <br>
+                <button class="join add-to-cart-btn" data-name="Plain rice with Egg" data-price="35">
+                  Order Now
+                </button>
+            </div>
+          </div>
+
+          <!-- Food Box 2 -->
+         <div class="food-menu-box">
+            <div class="food-menu-img">
+              <img src="images/tuozafi.jpg" alt="Tuo Zafi" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+              <h4>Tuo-Zafi with Ayoyo</h4>
+              <p class="food-price">GHS30</p>
+              <p class="food-detail">
+                Made with classic palm oil loaded with meat.
+              </p>
+              <br>
+                <button class="join add-to-cart-btn" data-name="Tuo-Zafi" data-price="30">
+                  Order Now
+                </button>
+            </div>
+          </div>
+            
+          <!-- Food Box 3 -->
+          <div class="food-menu-box">
+            <div class="food-menu-img">
+              <img src="images/waakye.jpg" alt="Waakye" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+              <h4>Waakye, Egg and fish</h4>
+              <p class="food-price">GHS35</p>
+              <p class="food-detail">
+                Made with beans, rice, salad and premium shito 
+              </p>
+              <br>
+                <button class="join add-to-cart-btn" data-name="Waakye, Egg and Fish" data-price="35">
+                  Order Now
+                </button>
+            </div>
+          </div>
+
+           <!-- Food Box 4 -->
+          <div class="food-menu-box">
+            <div class="food-menu-img">
+              <img src="images/jollof.png" alt="jollof" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+              <h4>Jollof Rice And Chicken</h4>
+              <p class="food-price">GHS30</p>
+              <p class="food-detail">
+                Made with authentic jasmine rice.
+              </p>
+              <br>
+                <button class="join add-to-cart-btn" data-name="Jollof Rice and Chicken" data-price="30">
+                  Order Now
+                </button>
+            </div>
+          </div>
+
+           <!-- Food Box 5 -->
+          <div class="food-menu-box">
+            <div class="food-menu-img">
+              <img src="images/fufu.png" alt="Fufu" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+              <h4>Fufu with Goat meat</h4>
+              <p class="food-price">GHC40</p>
+              <p class="food-detail">
+                Comes with our special light soup
+              </p>
+              <br>
+                <button class="join add-to-cart-btn" data-name="Fufu and Goat Meat" data-price="40">
+                  Order Now
+                </button>
+            </div>
+          </div>
+
+           <!-- Food Box 6 -->
+          <div class="food-menu-box">
+            <div class="food-menu-img">
+              <img src="images/friedrice.jpg" alt="Fried Rice" class="img-responsive img-curve">
+            </div>
+            <div class="food-menu-desc">
+              <h4>Fried Rice with Chicken</h4>
+              <p class="food-price">GHC35</p>
+              <p class="food-detail">
+                Made with authentic jasmine rice, and salad
+              </p>
+              <br>
+                <button class="join add-to-cart-btn" data-name="Fried Rice and Chicken" data-price="35">
+                  Order Now
+                </button>
+            </div>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+
+      <!-- CONTACT / FOOTER SECTION -->
+      <footer class="foot">
+        <div class="contact-container" id="contact">
+          <div class="row">
+            <div class="col-1">
+              <div class="info">
+                <img src="images/logo.png" class="logo" alt="logo">
+                <p>A Local restaurant is the kitchen table of the community.
+                   A place where familiar faces, warm meals, and good conversation meet.
+                </p>
+                <div class="socials">
+                  <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social">
+                    <i class="fa-brands fa-facebook"></i>
+                  </a>
+                  <a href="https://whatsapp.com" target="_blank" aria-label="WhatsApp" class="social">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </a>
+                  <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social">
+                    <i class="fa-brands fa-instagram"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="adress">
+                <h6>OUR ADDRESS</h6>
+                <p>18 street</p>
+                <p>Accra, Ghana</p>
+              </div>
+              <div class="det">
+                <p>PHONE: +233 53 918 3773</p>
+                <p>MAIL: flexinovgh@gmail.com</p>
+              </div>
+            </div>
+            <div class="col-1">
+              <div class="work-time">
+                <h6>OUR WORKING HOURS</h6>
+                <p>7:00am to 9:30pm</p>
+                <p>Monday to Sunday</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
