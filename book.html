@@ -3,6 +3,7 @@
   <head>
     <title>| BOOK A SERVICE</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -11,11 +12,17 @@
         <div class="nav-container">
           <div class="nav">
             <div class="icons">
-              <img src="images/logo.png" alt="logo" class="logo">
+              <a href="/"><img src="images/logo.png" alt="logo" class="logo"></a>
             </div>
-            <div class="menu">
+
+            <!-- Hamburger Button for Mobile -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars"></i>
+            </button>
+            
+            <div class="menu" id="navMenu">
               <ul>
-                <li><a href="index.html">HOME</a></li>
+                <li><a href="/">HOME</a></li>
               </ul>
             </div>
           </div>
@@ -72,6 +79,7 @@
       </div>
     </div>
 
+    <script src="app.js"></script>
     <script>
       document.getElementById('booking-form').addEventListener('submit', function(e) {
         e.preventDefault();
@@ -84,14 +92,12 @@
         const location = document.getElementById('location').value.trim();
         const info = document.getElementById('info').value.trim();
 
-        // Collect checked event types
         const selectedEvents = [];
         document.querySelectorAll('input[name="event"]:checked').forEach(checkbox => {
           selectedEvents.push(checkbox.value);
         });
         const eventTypesStr = selectedEvents.length > 0 ? selectedEvents.join(', ') : 'Not specified';
 
-        // Build WhatsApp message text
         const message = `Hello, I would like to inquire about event catering!\n\n` +
                         `*Name:* ${name}\n` +
                         `*Email:* ${email}\n` +
@@ -102,7 +108,6 @@
                         `*Location:* ${location || 'N/A'}\n` +
                         `*Additional Info:* ${info || 'N/A'}`;
 
-        // Replace with your business WhatsApp phone number (in international format, e.g., 233539183773)
         const whatsappNumber = "233539183773";
         const encodedMessage = encodeURIComponent(message);
 

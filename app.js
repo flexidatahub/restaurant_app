@@ -6,6 +6,14 @@ if (navToggle && navMenu) {
   navToggle.addEventListener('click', () => {
     navMenu.classList.toggle('active');
   });
+
+  // Close menu when any link inside it is clicked (mobile view)
+  const navLinks = navMenu.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('active');
+    });
+  });
 }
 
 // --- 2. GLOBAL CART LOAD & ADD TO CART ---
