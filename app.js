@@ -150,7 +150,6 @@ function handleWhatsAppCheckout(e) {
   const message = `Hello, I want to place an order!\n\n` +
                   `*Customer Details:*\n` +
                   `- Name: ${customerName}\n` +
-                  `- Email: ${customerEmail}\n` +
                   `- Phone: ${customerPhone}\n` +
                   `- Delivery Address: ${customerAddress}\n\n` +
                   `*Order Summary:*\n${itemsSummary}\n\n` +
