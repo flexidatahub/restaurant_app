@@ -163,3 +163,8 @@ function handleWhatsAppCheckout(e) {
   localStorage.removeItem('cart');
   window.location.href = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
 }
+
+// Force scroll to top on refresh so the reload is noticeable
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
